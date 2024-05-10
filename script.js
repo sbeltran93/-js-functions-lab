@@ -22,7 +22,6 @@ Example: isAdult(21) should return 'Adult'.
 
 Complete the exercise in the space below:
 */
-
 const isAdult = (age) => {
   if(age >= 18){
     return 'Adult'
@@ -46,7 +45,6 @@ Example: isCharAVowel('a') should return true.
 
 Complete the exercise in the space below:
 */
-
     const isCharAVowel = (a) => {
         if(a) 
             return 'true'
@@ -64,8 +62,6 @@ Example: generateEmail('johnsmith', 'example.com') should return 'johnsmith@exam
 
 Complete the exercise in the space below:
 */
-
-
 function generateEmail()  {
   const name = "johnsmith";
   const domain = "example.com";
@@ -88,7 +84,6 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 
 Complete the exercise in the space below:
 */
-
 function greetUser() {
   if (morning = true)
     return "Goodmorning, Sam!"
@@ -107,8 +102,6 @@ Example: reverseString('rockstar') should return the string "ratskcor".
 
 Complete the exercise in the space below:
 */
-
-
 const str = "rockstar"
 function reverseString (str) {
   let reverse = "";
@@ -135,35 +128,33 @@ Example: checkPalindrome('taco') should return false.
 
 Complete the exercise in the space below:
 */
-
-
-function checkPalindrome () {
-  let word = "radar"
-  for ( let idx = 0; idx < str.length; idx++){
-
+function checkPalindrome(str) {
+  const reversed = str.split("").reverse().join("");
+  if (reversed === str) {
+      return 'true'
+  }   else {
+      return 'false'
   }
-} 
-
-
-console.log('Exercise 7 Result:', checkPalindrome("radar"));
-
-
-
-const checkPalindrome = (str) => {
-  let forward = ""
-  let backward = ""
-  for ( let idx = 0; idx < str.length; idx++){
-      let currentChar = str[idx]
-
-      forward+=currentChar
-      console.log(currentChar)
-  }
-    for (let idx = str.length-1; idx >= 0; idx--){
-      let currentChar = str.length
-    }
-  return false
 }
 
 console.log('Exercise 7 Result:', checkPalindrome("radar"));
 
-"cat"[]
+
+
+
+
+
+/*
+Exercise 8: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+function maxOfThree(){
+  
+}
+
+console.log('Exercise 8 Result:', maxOfThree(5, 10, 8));
