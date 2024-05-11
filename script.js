@@ -145,16 +145,167 @@ console.log('Exercise 7 Result:', checkPalindrome("radar"));
 
 
 /*
-Exercise 8: maxOfThree()
+Exercise 9: calculateTip()
 
-Define a function, maxOfThree. It should accept three numbers and return the largest among them.
+Create a function called calculateTip. It should take two arguments: the bill amount and the tip percentage (as a whole number). The function should return the amount of the tip.
 
-Example: maxOfThree(17, 4, 9) should return 17.
+Example: calculateTip(50, 20) should return 10.
 
 Complete the exercise in the space below:
 */
-function maxOfThree(){
-  
+
+function calculateTip(){
+  const billAmount = 50;
+  const tipPercent = 0.20; 
+  const calculateTip = total = (billAmount * tipPercent);
+    return billAmount*tipPercent
 }
 
-console.log('Exercise 8 Result:', maxOfThree(5, 10, 8));
+console.log('Exercise 9 Result:', calculateTip(50, 20));
+
+
+
+
+/*
+Exercise 10: convertTemperature()
+
+Write a function named convertTemperature. It takes two arguments: a temperature and a string representing the scale ('C' for Celsius, 'F' for Fahrenheit). Convert the temperature to the other scale.
+
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
+
+Complete the exercise in the space below:
+*/
+
+function convertTemperature(celsius, fahrenheit){
+  fahrenheit = (celsius * 9/5) + 32;
+    return fahrenheit;   
+function convertTemperature(fahrenheit){
+  celsius = (fahrenheit - 32) * 5/9; 
+    return celsius;
+}
+  }
+
+  
+console.log('Exercise 10 Result:', convertTemperature(32, "C"));
+//COME BACK TO THIS!!! DOES NOT CONVERT!!!
+
+
+
+/*
+Exercise 11: basicCalculator()
+
+Create a function named basicCalculator. It should take three arguments: two numbers and a string representing an operation ('add', 'subtract', 'multiply', 'divide'). Perform the provided operation on the two numbers. In operations where the order of numbers is important, treat the first parameter as the first operand and the second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+
+  const basicCalculator = (sum1, sum2, operator) => {
+    switch (operator) {
+      case 'add':
+        return (sum1 + sum2);
+      case 'subtract':
+        return (sum1 - sum2);
+      case 'multiply':
+        return (sum1 * sum2);
+      case 'divide':
+        return (sum1 / sum2);      
+    }
+
+  }
+console.log('Exercise 11 Result:', basicCalculator(10, 5, "subtract"));
+
+
+
+
+
+
+/*
+Exercise 12: calculateGrade()
+
+Define a function called calculateGrade. It should take a numerical score and return the corresponding letter grade (A, B, C, D, F). For example, 90 and above yields an 'A', 80-89 is a 'B', and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade (A, B, C, D, F) {
+  let score = 88
+  if (score > 89) {
+    return 'A'
+  }
+  else if (score > 79) {
+    return 'B'
+  }
+  else if (score > 69) {
+    return 'C'
+  }
+  else if (score > 69) {
+    return 'D'
+  } else {
+    return 'F'
+  }  
+  }
+console.log('Exercise 12 Result:', calculateGrade(88));
+// i have to input grade in let score for this to work
+
+
+
+
+
+/*
+Exercise 13: createUsername()
+
+Define a function called createUsername. It should take a first name and a last name and return a username. The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
+
+Complete the exercise in the space below:
+*/
+
+
+function createUsername (str) {
+  let first = "Samantha";
+  let last = " Green";
+  return createUsername = first.substring(0,3) + last.substring(0,4) + (createUsername.length + 11);
+}
+console.log('Exercise 13 Result:', createUsername("Samantha", "Green"));
+
+//works but not done correctly
+
+
+/*
+Exercise 14: numArgs()
+
+Challenge yourself with numArgs. This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+function numArgs () {
+  return arguments.length;
+}
+console.log('Exercise 14 Result:', numArgs(1, 2, 3, 4));
+//dont really understand what I'm supposed to do wit this one?
+
+
+
+
+
+   
+let maxOfThree = (n1, n2, n3) => {
+      if (n1 > n2 && n1 > n3) {
+        return maxOfThree = n1;
+      }else if (n2 > n1 && n2 > n3) {
+        return maxOfThree = n2; 
+      }else if (n3 > n1 && n3 > n2)
+        return maxOfThree = n3
+}
+      console.log('Exercise 8 Result:', maxOfThree(5, 10, 8));
