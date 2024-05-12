@@ -30,7 +30,7 @@ const isAdult = (age) => {
   }
 }
 
-console.log('Exercise 2 Result:', isAdult(21));
+console.log('Exercise 2 Result:', isAdult(30));
 
 
 
@@ -45,13 +45,18 @@ Example: isCharAVowel('a') should return true.
 
 Complete the exercise in the space below:
 */
-    const isCharAVowel = (a) => {
-        if(a) 
-            return 'true'
-        else 'false'
-}    
-        console.log('Exercise 3 Result:', isCharAVowel('a'));
+const vowel = ['a', 'e', 'i', 'o', 'u'];
 
+  function isCharAVowel (char) {
+      for (let i = 0; i < 5; i++) {
+       if(vowel[i] === char) {
+          return true;
+        } else {
+          return false;
+       }
+      }
+          }
+        console.log('Exercise 3 Result:', isCharAVowel('b'));
 
 /*
 Exercise 4: generateEmail()
@@ -141,6 +146,27 @@ console.log('Exercise 7 Result:', checkPalindrome("radar"));
 
 
 
+/*
+Exercise 8: maxOfThree()
+
+Define a function, maxOfThree. It should accept three numbers and return the largest among them.
+
+Example: maxOfThree(17, 4, 9) should return 17.
+
+Complete the exercise in the space below:
+*/
+
+let maxOfThree = (n1, n2, n3) => {
+  if (n1 > n2 && n1 > n3) {
+    return maxOfThree = n1;
+  }else if (n2 > n1 && n2 > n3) {
+    return maxOfThree = n2; 
+  }else if (n3 > n1 && n3 > n2)
+    return maxOfThree = n3
+}
+  console.log('Exercise 8 Result:', maxOfThree(5, 10, 8));
+
+
 
 
 
@@ -177,18 +203,16 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-function convertTemperature(celsius, fahrenheit){
-  fahrenheit = (celsius * 9/5) + 32;
-    return fahrenheit;   
-function convertTemperature(fahrenheit){
-  celsius = (fahrenheit - 32) * 5/9; 
-    return celsius;
+function convertTemperature(temperature, scale){
+    if  (scale === 'C') {
+      return (temperature * 9/5) + 32
+    }
+    else if (scale === 'F') {
+      return (temperature - 32) * 5/9
+    }  
 }
-  }
-
-  
 console.log('Exercise 10 Result:', convertTemperature(32, "C"));
-//COME BACK TO THIS!!! DOES NOT CONVERT!!!
+
 
 
 
@@ -233,24 +257,23 @@ Example: calculateGrade(100) should return A.
 Complete the exercise in the space below:
 */
 
-function calculateGrade (A, B, C, D, F) {
-  let score = 88
-  if (score > 89) {
+function calculateGrade (score) {
+  if (score >= 90) {
     return 'A'
   }
-  else if (score > 79) {
+  else if (score >= 80) {
     return 'B'
   }
-  else if (score > 69) {
+  else if (score >= 70) {
     return 'C'
   }
-  else if (score > 69) {
+  else if (score >= 60) {
     return 'D'
-  } else {
+  } else if (score < 60) {
     return 'F'
   }  
   }
-console.log('Exercise 12 Result:', calculateGrade(88));
+console.log('Exercise 12 Result:', calculateGrade(100));
 // i have to input grade in let score for this to work
 
 
@@ -271,10 +294,13 @@ Complete the exercise in the space below:
 */
 
 
-function createUsername (str) {
-  let first = "Samantha";
-  let last = " Green";
-  return createUsername = first.substring(0,3) + last.substring(0,4) + (createUsername.length + 11);
+function createUsername (first, last) {
+ 
+ // let first = "Samantha";
+ // let last = "Green";
+
+  
+  return createUsername = first.substring(0,3) + last.substring(0,3) + (createUsername.length + 11);
 }
 console.log('Exercise 13 Result:', createUsername("Samantha", "Green"));
 
@@ -295,17 +321,3 @@ function numArgs () {
 console.log('Exercise 14 Result:', numArgs(1, 2, 3, 4));
 //dont really understand what I'm supposed to do wit this one?
 
-
-
-
-
-   
-let maxOfThree = (n1, n2, n3) => {
-      if (n1 > n2 && n1 > n3) {
-        return maxOfThree = n1;
-      }else if (n2 > n1 && n2 > n3) {
-        return maxOfThree = n2; 
-      }else if (n3 > n1 && n3 > n2)
-        return maxOfThree = n3
-}
-      console.log('Exercise 8 Result:', maxOfThree(5, 10, 8));
